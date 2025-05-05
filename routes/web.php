@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 Route::get('/', function () {
@@ -10,7 +10,7 @@ Route::resource('products', ProductController::class);
 Route::get('/', function () {
     return view('welcome');
 });
-use App\Http\Controllers\AuthController;
+
 
 // Auth Routes
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
